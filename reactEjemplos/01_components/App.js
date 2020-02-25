@@ -4,18 +4,14 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.box1}>
-        <Text style={styles.text}>Vista 1</Text>
+      <View style={styles.boxbox}>
+        <View style={styles.box1}></View>
+        <View style={styles.box3}></View> 
       </View>
-      <View style={styles.box2}>
-        <Text style={styles.text}>Vista 2</Text>
-      </View>
-      <View style={styles.box3}>
-        <Text style={styles.text}>Vista 3</Text>
-      </View>
-      <View style={styles.box4}>
-        <Text style={styles.text}>Vista 4</Text>
-      </View>
+      <View style={styles.boxbox}>
+        <View style={styles.box2}></View>
+        <View style={styles.box4}></View>  
+      </View>      
     </View>
   );
 }
@@ -29,20 +25,28 @@ const styles = StyleSheet.create({
   text: {
     color: '#ff1744'
   },
+  boxbox: {
+    flex: 1,
+    flexDirection: 'row'
+  },
   box1: {
     flex: 1,
-    backgroundColor: '#ffc107'
+    backgroundColor: '#ffc107',
+    flexDirection: 'row'
   },
   box2: {
     flex: 1,
-    backgroundColor: '#0d47a1'
+    backgroundColor: '#0d47a1',
+    flexDirection: 'row'
   },
   box3: {
     flex: 1,
-    backgroundColor: '#d50000'
+    backgroundColor: '#d50000',
+    flexDirection: 'column'
   },
   box4: {
     flex: 1,
-    backgroundColor: '#445626'
+    backgroundColor: '#445626',
+    flexDirection: 'column'
   }
 });
